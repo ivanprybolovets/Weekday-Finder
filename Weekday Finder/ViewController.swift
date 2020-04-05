@@ -44,8 +44,8 @@ class ViewController: UIViewController {
         guard let date = calendar.date(from: dateComponents) else { return }
         
         let weekDay = dateFormatter.string(from: date )
-        
-        resultLabel.text = weekDay
+        let capitalizedWeekDay = weekDay.capitalized
+        resultLabel.text = capitalizedWeekDay
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
