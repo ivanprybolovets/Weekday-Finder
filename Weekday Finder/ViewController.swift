@@ -36,6 +36,9 @@ class ViewController: UIViewController {
         dateComponents.year = Int(year)
         
         let dateFormatter = DateFormatter()
+        //Locale to Russian
+        dateFormatter.locale = Locale.init(identifier: "ru_Ru")
+        
         dateFormatter.dateFormat = "EEEE"
         
         guard let date = calendar.date(from: dateComponents) else { return }
